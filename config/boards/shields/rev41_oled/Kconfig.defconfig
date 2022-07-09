@@ -1,6 +1,5 @@
 if SHIELD_REVIUNG41_OLED
 
 config ZMK_KEYBOARD_NAME
-    default "Reviung41_OLED"
-
+    default "Rev41_OLED"
 endif
