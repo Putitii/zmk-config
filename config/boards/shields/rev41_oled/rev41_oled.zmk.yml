@@ -2,7 +2,7 @@ file_format: "1"
 id: rev41_oled
 name: Reviung 41 OLED Support 
 type: shield
-url: https://github.com/Putitii/Puca
+url: https://github.com/gtips/reviung/tree/master/reviung41
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
