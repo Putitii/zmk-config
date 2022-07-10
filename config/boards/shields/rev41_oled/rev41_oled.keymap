@@ -36,12 +36,12 @@
 // ----------------------------------------------------------------------------------
 // |ESC |    |     |  UP |  $  |     |  |     |  {  |  }  |     |     |   DEL   | 
 // |    |    | LFT | DWN | RGT |     |  |  =  |  (  |  )  |     |     |    ~    |
-// |    |    |  '  |  \  |  ]  |     |  |  -  |  [  |  ]  |     |     |  ENTER  |
+// |EP_OFF|EP_ON| ' | \  |  ]  |     |  |  -  |  [  |  ]  |     |     |  ENTER  |
 //                      |  LGUI  |      |    |  ADJ  |     |
                         bindings = <
    &kp ESC  &trans  &trans   &kp UP   &trans    &trans       &kp EQUAL &kp LBRC   &kp RBRC   &trans  &trans   &kp DEL
    &trans   &trans  &kp LEFT  &kp DOWN  &kp RIGHT &trans      &kp MINUS  &kp LPAR &kp RPAR  &trans  &trans   &trans
-   &trans &trans   &kp SQT   &kp BSLH  &kp RBKT   &trans       &trans  &kp LBKT  &kp RBKT  &trans &trans &kp ENTER
+  &ext_power EP_OFF &ext_power EP_ON &kp SQT &kp BSLH &kp RBKT &trans   &trans  &kp LBKT  &kp RBKT  &trans &trans &kp ENTER
                                  &kp LGUI      &trans       &trans        &mo 3       &trans
                         >;
                 };
