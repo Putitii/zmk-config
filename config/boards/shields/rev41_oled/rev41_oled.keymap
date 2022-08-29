@@ -34,27 +34,27 @@
                 };
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |ESC |    |     |  UP |  $  |     |  |     |  {  |  }  |     |     |   DEL   | 
-// |    |    | LFT | DWN | RGT |     |  |  =  |  (  |  )  |     |     |    ~    |
-// |EP_OFF|EP_ON| ' | \  |  ]  |     |  |  -  |  [  |  ]  |     |     |  ENTER  |
-//                      |  LGUI  |      |    |  ADJ  |     |
+// |ESC |     |HOME|  UP | END |       |    |  =  |  {  |  }  |     |         |   DEL   | 
+// |EP_ON|    |LFT | DWN | RGT |       |    |  -  |  (  |  )  |     | Previous|    ~    |
+// |EP_OFF|   | '  |  \  |  ]  |       |    |     |  [  |  ]  |     |  Next   |  ENTER  |
+//                   |  LGUI  |     |PlayPause|  ADJ  |       |
                         bindings = <
-   &kp ESC  &trans  &trans   &kp UP   &trans    &trans       &kp EQUAL &kp LBRC   &kp RBRC   &trans  &trans   &kp DEL
-   &trans   &trans  &kp LEFT  &kp DOWN  &kp RIGHT &trans      &kp MINUS  &kp LPAR &kp RPAR  &trans  &trans   &trans
-  &ext_power EP_OFF &ext_power EP_ON &kp SQT &kp BSLH &kp RBKT &trans   &trans  &kp LBKT  &kp RBKT  &trans &trans &kp ENTER
-                                 &kp LGUI      &trans       &trans        &mo 3       &trans
+   &kp ESC  &trans   &kp HOME  &kp UP   &kp END   &trans                  &kp EQUAL  &kp LBRC   &kp RBRC   &trans  &trans      &kp DEL
+   &&ext_power EP_ON   &trans  &kp LEFT  &kp DOWN  &kp RIGHT &trans       &kp MINUS  &kp LPAR  &kp RPAR  &trans  &kp C_PREVIOUS &trans
+  &ext_power EP_OFF   &trans &kp SQT &kp BSLH &kp RBKT &trans             &trans     &kp LBKT  &kp RBKT  &trans &kp C_NEXT     &kp ENTER
+                                 &kp LGUI      &trans       &kp C_PP     &mo 3       &trans
                         >;
                 };
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |    |  1  |   2  |  3  |   4  |   5   |  |  6  |  7 |  8  |  8  |  9  | 0 |  F12 |
-// |BT_CLR|  !   |  @   |  #   |  $  |  % | |  F5  |  F6  | F7  | F8  | F9 | F10 |
-// |BT_PRV|BT_NXT|  \   |   &  |  *  | ^  | |  F1  |  F2  | F3  | F4  |  .  | F11 |
-//                       |     | ADJ | BKSP |    |     |
+// |BT_CLR|  1  |   2   |  3  |   4  |   5  |   |  6  |  7 |  8  |  8  |  9  | 0 |  F12 |
+// |BT_PRV|  !  |   @   |  #   |  $  |  %   |   |  F5  |  F6  | F7  | F8  | F9 | F10 |
+// |BT_NXT|     |   \   |   &  |  *  |  ^   |   |  F1  |  F2  | F3  | F4  |  .  | F11 |
+//                             |     | ADJ | BKSP |    |     |
                         bindings = <
-   &trans    &kp N1      &kp N2     &kp N3      &kp N4     &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0  &kp F12
-   &bt BT_CLR  &kp EXCL  &kp AT   &kp HASH   &kp DLLR   &kp PRCNT          &kp F5   &kp F6   &kp F7    &kp F8    &kp F9   &kp F10
-   &bt BT_PRV &bt BT_NXT &kp BSLH &kp AMPS &kp STAR &kp CARET           &kp N0    &kp N1    &kp N2    &kp N3   &kp DOT   &kp F11
+   &bt BT_CLR   &kp N1      &kp N2     &kp N3      &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0  &kp F12
+   &bt BT_PREV  &kp EXCL   &kp AT   &kp HASH   &kp DLLR    &kp PRCNT          &kp F5   &kp F6   &kp F7    &kp F8    &kp F9   &kp F10
+   &bt BT_NEXT  &trans    &kp BSLH  &kp AMPS   &kp STAR    &kp CARET           &kp N0    &kp N1    &kp N2    &kp N3   &kp DOT   &kp F11
                                 &trans      &mo 3       &kp BSPC        &trans      &trans
                         >;
                 };
