@@ -39,10 +39,10 @@
 // |EP_OFF|   | '  |  \  |  ]  |       |    |     |  [  |  ]  |     |  Next   |  ENTER  |
 //                   |  LGUI  |     |PlayPause|  ADJ  |       |
                         bindings = <
-   &kp ESC  &trans   &kp HOME  &kp UP   &kp END   &trans                  &kp EQUAL  &kp LBRC   &kp RBRC   &trans  &trans      &kp DEL
-   &ext_power EP_ON   &trans  &kp LEFT  &kp DOWN  &kp RIGHT &trans       &kp MINUS  &kp LPAR  &kp RPAR  &trans  &kp C_PREVIOUS &trans
-  &ext_power EP_OFF   &trans &kp SQT &kp BSLH &kp RBKT &trans             &trans     &kp LBKT  &kp RBKT  &trans &kp C_NEXT     &kp ENTER
-                                 &kp LGUI      &trans       &kp C_PP     &mo 3       &trans
+   &kp ESC  &trans   &kp HOME  &kp UP   &kp END   &trans                  &kp EQUAL  &kp LBRC   &kp RBRC   &trans  &trans  &kp DEL
+   &ext_power EP_ON   &trans  &kp LEFT  &kp DOWN  &kp RIGHT &trans       &kp MINUS  &kp LPAR  &kp RPAR  &trans  &trans     &trans
+  &ext_power EP_OFF   &trans &kp SQT    &kp BSLH  &kp RBKT  &trans       &trans     &kp LBKT  &kp RBKT  &trans &trans     &kp ENTER
+                                 &kp LGUI      &trans       &trans     &mo 3       &trans
                         >;
                 };
                 raise_layer {
