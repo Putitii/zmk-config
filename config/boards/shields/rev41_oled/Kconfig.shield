@@ -1,2 +1,0 @@
-config SHIELD_REVIUNG41_OLED
-    def_bool $(shields_list_contains,rev41_oled)
