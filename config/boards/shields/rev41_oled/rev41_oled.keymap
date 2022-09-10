@@ -17,11 +17,15 @@
 / {
         behaviors {
                 td0: tap_dance_0 {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_0";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp LSHIFT>, <&kp CAPS>;
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_0";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <150>;
+                        bindings = <&kp LSHIFT>, <&kp CAPS>;
+                };
+                
+                &mt {
+                        tapping-term-ms = <400>;
                 };
         };
          
@@ -33,7 +37,7 @@
 // -------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   DEL   |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |   '     |
-// | CTRL |  Z  |  X  |CTRLC|CTRLV|  B  |   |  N  |  M   |  ,  |  .  |  /  |  ENTER  |
+// | CTRL |  Z  |  X  |     |     |  B  |   |  N  |  M   |  ,  |  .  |  /  |  ENTER  |
 //                         | L3 | SPC | BKSP | LOW  | RSE |
                         bindings = <
 &mt ESC TAB  &kp Q &kp W &kp E     &kp R    &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
@@ -42,6 +46,7 @@
                         &tog L3  &kp SPACE &kp BSPC &mo LOWER  &mo RAISE
                         >;
                 };
+
                 lower_layer {
 // ----------------------------------------------------------------------------------
 // |TAB |    |HOME |  UP | END |PGUP  |  |     |  {  |  }  |     |     |BT_CLR|
@@ -61,7 +66,7 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  1   |  2   |  3  |  4  |  5 |  |  6  | 7    |  8   |  9  | 0   |     |
-// |     |  !   |  @   |  #  |  $  |  % |  |     |LGUI  |LGUI+E|     |     |     |
+// |     |  !   |  @   |  #  |  $  |  % |  |     |LGUI  |      |     |     |     |
 // |     |      |  \   |  &  |  *  | ^  |  |     |CPLINE|      |  .  |     |     |
 //                           |PLAY |     | BKSP |    |     |
 

@@ -10,21 +10,25 @@
 / {
         behaviors {
                 td0: tap_dance_0 {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_0";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp LSHIFT>, <&kp CAPS>;
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_0";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <150>;
+                        bindings = <&kp LSHIFT>, <&kp CAPS>;
                 };
 
                 hm: homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping-term-ms = <150>;
-                quick-tap-ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+
+                &mt {
+                        tapping-term-ms = <400>;
                 };
         };
 
@@ -35,7 +39,7 @@
 // -----------------------------------------------------------------------------------------
 // |ESCTAB|  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  DEL |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |CTRLC|CTRLV|  B  |         |  N  |  M   |  ,  |  .  |  /  |      |
+// | CTRL |  Z  |  X  |     |     |  B  |         |  N  |  M   |  ,  |  .  |  /  |      |
 //                    | L3  |SPACE|ENTER|         |BKCSP|  L1  | L2  |
 
                         bindings = <
@@ -64,7 +68,7 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  1   |  2   |  3   |  4  | 5  |         |  6  |  7   |  8   |  9  | 0   |    |
-// |     |  !   |  @   |  #   |  $  | %  |         |     |LGUI  |LGUI+E|     |     |    |
+// |     |  !   |  @   |  #   |  $  | %  |         |     |LGUI  |      |     |     |    |
 // |     |      |  \   |  &   |  *  | ^  |         |     |CPLINE|      |  .  |     |    |
 //                     | PLAY |SPACE|BKSP|         |     |     |      |
 
