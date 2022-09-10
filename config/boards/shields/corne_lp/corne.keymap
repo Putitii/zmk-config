@@ -7,6 +7,10 @@
 #define RAISE 2
 #define L3 3
 
+&mt {
+        tapping-term-ms = <400>;
+};
+
 / {
         behaviors {
                 td0: tap_dance_0 {
@@ -25,11 +29,7 @@
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
-                };
-
-                &mt {
-                        tapping-term-ms = <400>;
-                };
+                };        
         };
 
         keymap {    

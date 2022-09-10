@@ -14,6 +14,10 @@
 #define RAISE   2
 #define L3 3
 
+&mt {
+        tapping-term-ms = <400>;
+};
+
 / {
         behaviors {
                 td0: tap_dance_0 {
@@ -22,10 +26,6 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <150>;
                         bindings = <&kp LSHIFT>, <&kp CAPS>;
-                };
-                
-                &mt {
-                        tapping-term-ms = <400>;
                 };
         };
          
