@@ -58,9 +58,9 @@
 //                 | ALT |     |      |         |     |     |     |
 
                         bindings = <
-   &kp TAB   &trans  &kp HOME  &kp UP   &kp END     &kp PG_UP       &kp EQUAL  &kp LBRC   &kp RBRC &trans  &trans  &bt BT_CLR
-   &trans   &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DOWN     &kp MINUS  &kp LPAR  &kp RPAR  &trans  &trans  &bt BT_PRV
-   &trans &trans    &kp SQT   &kp BSLH  &kp RBKT   &trans          &trans     &kp LBKT  &kp RBKT  &trans  &trans  &bt BT_NXT 
+   &kp TAB   &trans  &kp HOME  &kp UP   &kp END     &kp PG_UP       &kp EQUAL  &kp LBRC   &kp RBRC &trans &bt BT_CLR &trans  
+   &trans   &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DOWN     &kp MINUS  &kp LPAR  &kp RPAR  &trans  &bt BT_PRV  &trans  
+   &trans &trans    &kp SQT   &kp BSLH  &kp RBKT   &trans          &trans     &kp LBKT  &kp RBKT  &trans  &bt BT_NXT  &trans   
                               &kp LALT  &trans    &trans          &tarns     &trans      &trans
                         >;
                 };
