@@ -59,7 +59,7 @@
 
                        bindings = <
    &kp TAB  &trans  &kp HOME  &kp UP    &kp END   &kp PG_UP       &kp EQUAL &kp LBRC  &kp RBRC  &trans  &trans   &bt BT_CLR
-   &trans   &trans  &kp LEFT &kp DOWN &kp RIGHT &kp PAGE_DOWN   &trans  &kp LGUI &trans &trans &trans   &bt BT_SEL 0
+   &trans   &trans  &kp LEFT &kp DOWN &kp RIGHT &kp PAGE_DOWN   &kp MINUS  &kp LPAR &kp RPAR  &trans  &trans   &bt BT_SEL 0
    &kp LCTRL   &kp Z &kp X &kp C   &kp V   &kp B       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &trans
                    &tog L3    &kp SPACE   &kp ENTER    &kp RET &mo 1 &mo 2
                         >;
