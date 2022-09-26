@@ -30,7 +30,17 @@
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
-                };        
+                }; 
+                gqt: global-quick-tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "GLOBAL_QUICK_TAP";
+                        #binding-cells = <2>;
+                        flavor = "tap-preferred";
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <125>;
+                        global-quick-tap;
+                        bindings = <&kp>, <&kp>;
+};      
         };
 
         keymap {    
@@ -44,10 +54,10 @@
 //                      |    |L3SPACE|SHFTENTER|         |BKCSP|  L1  |    |
 
                         bindings = <
-   &trans   &ht_tp ESC Q  &kp W    &kp E   &kp R        &kp T             &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
-   &trans   &kp A      &kp S  &kp D   &kp F   &kp G         &kp H      &kp J    &kp K     &kp L   &ht_tp LS(SEMI) SEMI &trans
-   &trans   &kp Z      &kp X  &kp C   &kp V   &kp B         &kp N      &kp M    &kp COMMA &kp DOT &ht_tp LS(FSLH) FSLH &trans
-                                        &trans    &ht_tp L3 SPACE  &ht_tp LSHFT ENTER   &mt 2 BSPC &ht_tp 1 DEL  &trans
+   &trans   &gqt ESC Q  &kp W    &kp E   &kp R  &kp T         &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
+   &trans   &kp A      &kp S  &kp D   &kp F    &kp G         &kp H      &kp J    &kp K     &kp L   &gqt LS(SEMI) SEMI &trans
+   &trans   &kp Z      &kp X  &kp C   &kp V    &kp B         &kp N      &kp M    &kp COMMA &kp DOT &gqt LS(FSLH) FSLH &trans
+                 &trans    &gqt L3 SPACE  &gqt LSHFT ENTER   &gqt 2 BSPC &gqt 1 DEL  &trans
                         >;
                 };
 
