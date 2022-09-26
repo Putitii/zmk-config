@@ -37,30 +37,30 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |ESCTAB|  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  DEL |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |      |
-//                    | L3  |SPACE|ENTER|         |BKCSP|  L1  | L2  |
+// |   |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  DEL |
+// |   |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '   |
+// |   |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |      |
+//                    |    |SPACE|ENTER|         |BKCSP|  L1  |    |
 
                         bindings = <
-   &trans   &mt ESC Q    &kp W        &kp E         &kp R        &kp T       &kp Y      &kp U        &kp I     &kp O   &kp P             &trans
-   &trans   &mt LC(A) A  &mt LC(S) S  &kp D         &kp F        &kp G       &kp H      &kp J        &kp K     &kp L   &mt LS(SEMI) SEMI &trans
-   &trans   &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C   &mt LC(V) V  &kp B       &kp N      &kp M        &kp COMMA &kp DOT &mt LS(FSLH) FSLH &trans
-                                        &trans    &mt L3 SPACE   &kp ENTER   &mt 2 BSPC &mt 1 ENTER  &trans
+   &trans   &mt ESC Q    &kp W        &kp E        &kp R        &kp T          &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
+   &trans   &mt LC(A) A  &mt LC(S) S  &kp D        &kp F        &kp G          &kp H      &kp J    &kp K     &kp L   &mt LS(SEMI) SEMI &trans
+   &trans   &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V  &kp B          &kp N      &kp M    &kp COMMA &kp DOT &mt LS(FSLH) FSLH &trans
+                                        &trans    &mt L3 SPACE  &mt LSHFT ENTER      &mt 2 BSPC &mt 1 DEL  &trans
                         >;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |TAB |    | HOME| UP  | END | PGUP |         |  =  |  {  |  }  |     |      | BT_CLR  | 
-// |    |    | LFT | DWN | RGT |PGDOWN|         |  -  |  (  |  )  |  '  |  ""  |  BT_0   |
-// |    |    |  '  |  \  |  ]  |      |         |     |  [  |  ]  |     |      |  BT_1   |
-//                 | ALT |     |      |         |     |     |     |
+// |    | TAB | HOME| UP  | END | PGUP |         |  =  |  {  |  }  |     |      | BT_CLR  | 
+// |    |     | LFT | DWN | RGT |PGDOWN|         |  -  |  (  |  )  |  '  |  ""  |  BT_0   |
+// |    |     |  '  |  \  |  ]  |      |         |     |  [  |  ]  |     | LSHT |  BT_1   |
+//                  | ALT |     |      |         |     |     |     |
 
                        bindings = <
-   &trans  &kp TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP       &kp EQUAL  &kp LBRC  &kp RBRC  &trans  &trans   &trans
-   &trans  &trans  &kp LEFT &kp DOWN   &kp RIGHT &kp PAGE_DOWN   &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT &kp APOS  &trans
-   &trans  &trans  &kp SQT  &kp BSLH   &kp RBKT  &trans          &trans     &kp LBKT  &kp RBKT  &trans  &trans    &trans
+   &trans  &kp TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP       &kp EQUAL  &kp LBRC  &kp RBRC  &trans  &trans    &trans
+   &trans  &trans  &kp LEFT &kp DOWN   &kp RIGHT &kp PAGE_DOWN   &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT &kp APOS   &trans
+   &trans  &trans  &kp SQT  &kp BSLH   &kp RBKT  &trans          &trans     &kp LBKT  &kp RBKT  &trans  &kp LSHFT  &trans
                         &trans  &kp LALT   &kp ENTER                &kp BSPC  &trans  &trans 
                         >;
                 };
@@ -75,7 +75,7 @@
                         bindings = <
    &trans   &kp N1    &kp N2       &kp N3    &kp N4   &kp N5            &kp N6     &kp N7          &kp N8      &kp N9   &kp N0   &trans
    &trans   &kp EXCL  &kp AT      &kp HASH   &kp DLLR  &kp PRCNT        &trans    &kp LGUI         &trans     &trans    &trans   &trans  
-   &trans   &kp PIPE   &kp BSLH   &kp AMPS   &kp STAR  &kp CARET       &trans    &kp LS(LA(UP))   &trans      &kp DOT   &kp FSLH  &trans  
+   &trans   &kp PIPE   &kp BSLH   &kp AMPS   &kp STAR  &kp CARET       &tralns    &kp LS(LA(UP))   &trans      &kp DOT   &kp FSLH  &trans  
                             	 &trans     &kp SPACE   &kp ENTER      &kp BSPC   &kp C_PLAY_PAUSE  &trans
                         >;
                 };
@@ -88,10 +88,10 @@
 //                   |      |SPACE|ENTER|         |BKSPC| L1  |     |
 
                         bindings = <
-   &trans      &kp N1      &kp N2        &kp N3    &kp N4    &kp N5       &kp N6    &kp N7   &kp N8    &kp N9   &kp N0    &trans
-   &trans      &kp F1      &kp F2        &kp F3    &kp F4    &kp F5       &kp F6    &kp F7   &kp F8   &kp F9    &kp F10  &trans
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans   &trans   &kp F11      &kp F11   &kp F12  &kp COMMA  &kp DOT &kp FSLH &trans 
-                            &trans   &kp SPACE  &kp ENTER        &kp RET   &mo 1    &trans
+   &trans      &kp N1      &kp N2        &kp N3       &kp N4    &kp N5      &kp N6    &kp N7   &kp N8    &kp N9   &kp N0    &trans
+   &trans      &kp F1      &kp F2        &kp F3       &kp F4    &kp F5      &kp F6    &kp F7   &kp F8   &kp F9    &kp F10  &trans
+   &trans      &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans   &kp F11     &kp F11   &kp F12  &kp COMMA  &kp DOT &kp FSLH &trans 
+                                       &trans   &kp SPACE  &kp ENTER        &kp RET   &mo 1    &trans
                         >;
                 };
         };
