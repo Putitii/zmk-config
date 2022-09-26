@@ -44,10 +44,10 @@
 //                      |    |L3SPACE|SHFTENTER|         |BKCSP|  L1  |    |
 
                         bindings = <
-   &trans   &mt ESC Q  &kp W    &kp E   &kp R        &kp T             &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
-   &trans   &kp A      &kp S  &kp D   &kp F   &kp G         &kp H      &kp J    &kp K     &kp L   &mt LS(SEMI) SEMI &trans
-   &trans   &kp Z      &kp X  &kp C   &kp V   &kp B         &kp N      &kp M    &kp COMMA &kp DOT &mt LS(FSLH) FSLH &trans
-                                        &trans    &mt L3 SPACE  &mt LSHFT ENTER   &mt 2 BSPC &mt 1 DEL  &trans
+   &trans   &ht_tp ESC Q  &kp W    &kp E   &kp R        &kp T             &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
+   &trans   &kp A      &kp S  &kp D   &kp F   &kp G         &kp H      &kp J    &kp K     &kp L   &ht_tp LS(SEMI) SEMI &trans
+   &trans   &kp Z      &kp X  &kp C   &kp V   &kp B         &kp N      &kp M    &kp COMMA &kp DOT &ht_tp LS(FSLH) FSLH &trans
+                                        &trans    &ht_tp L3 SPACE  &ht_tp LSHFT ENTER   &mt 2 BSPC &ht_tp 1 DEL  &trans
                         >;
                 };
 
