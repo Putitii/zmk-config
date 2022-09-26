@@ -8,11 +8,12 @@
 #define L3 3
 
 &lt {
+        flavor = "tap-preferred";
         tapping-term-ms = <200>;
-        quick-tap-ms = <125>;
 };
+&mt {
 
-/ {
+} 
         behaviors {
                 td0: tap_dance_0 {
                         compatible = "zmk,behavior-tap-dance";
