@@ -8,7 +8,7 @@
 #define L3 3
 
 &mt {
-    flavor = "tap-preferred";
+    quick-tap-ms = <100>;
     tapping-term-ms = <200>;
 };
 
@@ -54,10 +54,10 @@
 //                      |    |L3SPACE|SHFTENTER|         |BKCSP|  L1  |    |
 
                         bindings = <
-   &trans   &gqt ESC Q  &kp W    &kp E   &kp R  &kp T         &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
-   &trans   &kp A      &kp S  &kp D   &kp F    &kp G         &kp H      &kp J    &kp K     &kp L   &gqt LS(SEMI) SEMI &trans
-   &trans   &kp Z      &kp X  &kp C   &kp V    &kp B         &kp N      &kp M    &kp COMMA &kp DOT &gqt LS(FSLH) FSLH &trans
-                 &trans    &gqt L3 SPACE  &gqt LSHFT ENTER   &gqt 2 BSPC &gqt 1 DEL  &trans
+   &trans   &mt ESC Q  &kp W    &kp E   &kp R  &kp T         &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
+   &trans   &kp A      &kp S  &kp D   &kp F    &kp G         &kp H      &kp J    &kp K     &kp L   &mt LS(SEMI) SEMI &trans
+   &trans   &kp Z      &kp X  &kp C   &kp V    &kp B         &kp N      &kp M    &kp COMMA &kp DOT &mt LS(FSLH) FSLH &trans
+                 &trans    &mt L3 SPACE  &mt LSHFT ENTER   &mt 2 BSPC &mt 1 DEL  &trans
                         >;
                 };
 
