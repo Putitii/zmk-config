@@ -8,7 +8,7 @@
 #define L3 3
 
 &mt {
-    quick-tap-ms = <100>;
+    //quick-tap-ms = <100>;
     tapping-term-ms = <200>;
 };
 
