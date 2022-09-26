@@ -10,8 +10,7 @@
 &lt {
         tapping-term-ms = <150>;
 };
-&mt {
-};
+/ {
         behaviors {
                 td0: tap_dance_0 {
                         compatible = "zmk,behavior-tap-dance";
