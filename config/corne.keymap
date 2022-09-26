@@ -8,9 +8,13 @@
 #define L3 3
 
 &lt {
-        //flavor = "tap-preferred";
-        tapping-term-ms = <200>;
+        flavor = "balanced";
+        tapping-term-ms = <150>;
 };
+
+&mt {
+};
+
 / {
         behaviors {
                 td0: tap_dance_0 {
@@ -56,7 +60,7 @@
    &trans   &mt ESC Q  &kp W    &kp E   &kp R  &kp T         &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
    &trans   &kp A      &kp S  &kp D   &kp F    &kp G         &kp H      &kp J    &kp K     &kp L   &mt LS(SEMI) SEMI &trans
    &trans   &kp Z      &kp X  &kp C   &kp V    &kp B         &kp N      &kp M    &kp COMMA &kp DOT &mt LS(FSLH) FSLH &trans
-                 &trans    &lt L3 SPACE  &mt LSHFT ENTER   &lt 2 BSPC &lt 1 DEL  &trans
+         &trans    &lt L3 SPACE  &mt LSHFT ENTER   &lt 2 BSPC &lt 1 DEL  &trans
                         >;
                 };
 
