@@ -75,7 +75,7 @@
    &trans  &kp TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP        &kp EQUAL  &kp LBRC  &kp RBRC  &trans  &trans      &trans
    &trans  &trans  &kp LEFT &kp DOWN   &kp RIGHT  &kp PAGE_DOWN    &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT &kp LS(SQT) &trans
    &trans  &trans  &kp SQT  &kp BSLH   &kp RBKT   &kp LSHFT        &trans     &kp LBKT  &kp RBKT  &trans  &sk LSHFT   &trans
-                             &kp LALT  &kp LCTRL  &trans           &trans     &trans   &trans 
+                             &kp LALT  &sk LCTRL  &trans           &trans     &trans   &trans 
                         >;
                 };
 
