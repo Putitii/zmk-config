@@ -24,26 +24,6 @@
                         tapping-term-ms = <150>;
                         bindings = <&kp LSHIFT>, <&kp CAPS>;
                 };
-
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "HOMEROW_MODS";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <150>;
-                        quick-tap-ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                }; 
-                gqt: global-quick-tap {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "GLOBAL_QUICK_TAP";
-                        #binding-cells = <2>;
-                        flavor = "balanced";
-                        tapping-term-ms = <200>;
-                        quick-tap-ms = <125>;
-                        global-quick-tap;
-                        bindings = <&kp>, <&kp>;
-};      
         };
 
         keymap {    
@@ -51,30 +31,30 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |   |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  DEL |
-// |   |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '   |
-// |   |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |      |
-//            | L3 |SPACE|SHFTENTER|         |BKCSP|  L1  | L2  |
+// |   |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |    |
+// |   |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |    |
+// |   |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |    |
+//                | L3 |SPACE|SHFTENT|         |BKCSP|  L1  | L2  |
 
                         bindings = <
-   &trans   &mt ESC Q  &kp W    &kp E   &kp R  &kp T         &kp Y      &kp U    &kp I     &kp O   &kp P             &trans
-   &trans   &kp A      &kp S  &kp D   &kp F    &kp G         &kp H      &kp J    &kp K     &kp L   &mt LS(SEMI) SEMI &trans
-   &trans   &kp Z      &kp X  &kp C   &kp V    &kp B         &kp N      &kp M    &kp COMMA &kp DOT &mt LS(FSLH) FSLH &trans
-                      &tog 3   &kp SPACE  &mt LSHFT ENTER   &kp BSPC &mo 1  &mo 2
+   &trans   &kp Q    &kp W   &kp E   &kp R    &kp T        &kp Y      &kp U    &kp I     &kp O   &kp P      &trans
+   &trans   &kp A    &kp S   &kp D   &kp F    &kp G        &kp H      &kp J    &kp K     &kp L   &kp SEMI   &trans
+   &trans   &kp Z    &kp X   &kp C   &kp V    &kp B        &kp N      &kp M    &kp COMMA &kp DOT &kp FSLH   &trans
+                &tog 3   &kp SPACE  &mt LSHFT ENTER      &kp BSPC &mo 1  &mo 2
                         >;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |    | TAB | HOME| UP  | END | PGUP |         |  =  |  {  |  }  |     |      |     | 
+// |    | TAB | HOME| UP  | END | PGUP |         |  =  |  {  |  }  |     |  DEL |     | 
 // |    |     | LFT | DWN | RGT |PGDOWN|         |  -  |  (  |  )  |  '  |  ""  |     |
 // |    |     |  '  |  \  |  ]  |      |         |     |  [  |  ]  |     | LSHT |     |
 //                  | ALT |CTRL |      |         |     |     |     |
 
                        bindings = <
-   &trans  &kp TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP        &kp EQUAL  &kp LBRC  &kp RBRC  &trans  &trans      &trans
-   &trans  &trans  &kp LEFT &kp DOWN   &kp RIGHT  &kp PAGE_DOWN    &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT &kp LS(SQT) &trans
-   &trans  &trans  &kp SQT  &kp BSLH   &kp RBKT   &kp LSHFT        &trans     &kp LBKT  &kp RBKT  &trans  &sk LSHFT   &trans
+   &trans  &mt ESC TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP          &kp EQUAL  &kp LBRC   &kp RBRC   &trans    &kp DEL     &trans
+   &trans  &trans       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PAGE_DOWN    &kp MINUS  &kp LPAR  &kp RPAR   &kp SQT  &kp LS(SQT) &trans
+   &trans  &trans       &kp SQT   &kp BSLH   &kp RBKT   &kp LSHFT        &trans     &kp LBKT  &kp RBKT   &trans   &sk LSHFT   &trans
                              &kp LALT  &sk LCTRL  &trans           &trans     &trans   &trans 
                         >;
                 };
