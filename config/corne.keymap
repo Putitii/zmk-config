@@ -43,9 +43,9 @@
 //                    | L3  |SPACE|ENTER|         |BKCSP|  L1  | L2  |
 
                         bindings = <
-   &mt ESC TAB &kp Q &kp W &kp E   &kp R   &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
-   &td0        &kp A &kp S &kp D   &kp F   &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL   &kp Z &kp X &kp C   &kp V   &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &trans
+   &trans   &mt Q ESC    &kp W        &kp E        &kp R     &kp T         &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
+   &trans   &kp A        &kp S        &kp D        &kp F       &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &trans
+   &trans   &kp LC(Z) Z  &kp LC(X) X  &kp LC(C) C  &kp LC(V) V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &trans
                    &tog L3    &kp SPACE   &kp ENTER     &kp BSPC &mo 1 &mo 2
                         >;
                 };
@@ -58,9 +58,9 @@
 //                 | ALT |     |      |         |     |     |     |
 
                        bindings = <
-   &kp TAB  &trans  &kp HOME  &kp UP    &kp END   &kp PG_UP       &kp EQUAL  &kp LBRC  &kp RBRC  &trans  &trans   &bt BT_CLR
-   &trans   &trans  &kp LEFT &kp DOWN   &kp RIGHT &kp PAGE_DOWN   &kp MINUS  &kp LPAR  &kp RPAR  &trans  &trans   &bt BT_SEL 0
-   &trans   &trans  &kp SQT  &kp BSLH   &kp RBKT  &trans          &trans     &kp LBKT  &kp RBKT  &trans  &trans   &bt BT_SEL 1
+   &kp TAB  &trans  &kp HOME  &kp UP    &kp END   &kp PG_UP       &kp EQUAL  &kp LBRC  &kp RBRC  &trans  &trans     &bt BT_CLR
+   &trans   &trans  &kp LEFT &kp DOWN   &kp RIGHT &kp PAGE_DOWN   &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT  &kp APOS  &bt BT_SEL 0
+   &trans   &trans  &kp SQT  &kp BSLH   &kp RBKT  &trans          &trans     &kp LBKT  &kp RBKT  &trans  &trans     &bt BT_SEL 1
                    &kp LALT  &kp SPACE   &kp ENTER                &kp BSPC  &trans  &trans 
                         >;
                 };
