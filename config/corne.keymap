@@ -47,15 +47,15 @@
                 lower_layer {
 // ----------------------------------------------------------------------------------
 // |    | TAB | HOME| UP  | END | PGUP |         |  =  |  {  |  }  |     |  DEL |     | 
-// |    |     | LFT | DWN | RGT |PGDOWN|         |  -  |  (  |  )  |  '  |  ""  |     |
-// |    |     |  '  |  \  |  ]  |      |         |     |  [  |  ]  |     | LSHT |     |
+// |    |     | LFT | DWN | RGT |PGDOWN|         |  -  |  (  |  )  |     |      |     |
+// |    |     |  '  |  \  |  ]  |      |         |  '  |  [  |  ]  |     | LSHT |     |
 //                  | ALT |CTRL |      |         |     |     |     |
 
                        bindings = <
-   &trans  &mt ESC TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP          &kp EQUAL  &kp LBRC   &kp RBRC   &trans    &kp DEL     &trans
-   &trans  &trans       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PAGE_DOWN    &kp MINUS  &kp LPAR  &kp RPAR   &kp SQT  &kp LS(SQT) &trans
-   &trans  &trans       &kp SQT   &kp BSLH   &kp RBKT   &kp LSHFT        &trans     &kp LBKT  &kp RBKT   &trans   &sk LSHFT   &trans
-                             &kp LALT  &sk LCTRL  &trans           &trans     &trans   &trans 
+   &trans  &mt ESC TAB  &kp HOME  &kp UP    &kp END   &kp PG_UP          &kp EQUAL  &kp LBRC  &kp RBRC   &trans   &kp DEL    &trans
+   &trans  &trans       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PAGE_DOWN    &kp MINUS  &kp LPAR  &kp RPAR   &trans   &trans     &trans
+   &trans  &trans       &kp SQT   &kp BSLH   &kp RBKT   &trans           &kp SQT    &kp LBKT  &kp RBKT   &trans   &sk LSHFT  &trans
+                             &kp LALT  &sk LCTRL  &kp LSHIFT           &trans     &trans   &trans 
                         >;
                 };
 
