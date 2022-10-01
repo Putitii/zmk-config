@@ -25,7 +25,7 @@
                         bindings = <&kp LSHIFT>, <&kp CAPS>;
                 };
                 h0: hold_tap_0 {
-                        compatible = "zmk,behavior-tap-dance";
+                        compatible = "zmk,behavior-hold-tap";
                         label = "HOLD_TAP_0";
                         #binding-cells = <2>;
                         flavor = "hold-preferred";
