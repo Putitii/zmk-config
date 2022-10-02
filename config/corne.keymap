@@ -90,9 +90,9 @@
 //                  |      |SPACE|ENTER|         |BKSPC| L1  |     |
 
                         bindings = <
-   &trans      &kp N1      &kp N2        &kp N3        &kp N4    &kp N5       &kp N6    &kp N7     &kp N8    &kp N9   &kp N0     &trans
-   &trans      &kp F1      &kp F2        &kp F3        &kp F4    &kp F5       &kp F6    &kp F7     &kp F8    &kp F9   &kp F10    &trans
-   &trans      &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans   &kp F11       &kp F11   &kp F12    &kp COMMA  &kp DOT  &kp FSLH  &trans 
+   &trans    &kp N1    &kp N2    &kp N3   &kp N4    &kp N5          &kp N6    &kp N7     &kp N8    &kp N9   &kp N0     &trans
+   &trans    &kp F1    &kp F2    &kp F3   &kp F4    &kp F5          &kp F6    &kp F7     &kp F8    &kp F9   &kp F10    &trans
+   &trans    &trans    &trans    &trans   &trans    &kp F11         &kp F11   &kp F12    &kp COMMA  &kp DOT  &kp FSLH  &trans 
                                        &trans   &kp SPACE  &kp ENTER        &trans   &trans    &trans
                         >;
                 };
@@ -105,9 +105,9 @@
 //                |       |     |     |         |     |     |     |
 
                         bindings = <
-   &trans     &trans      &sk LALT    &sk LCTRL   &sk LSHFT   &trans            &trans    &trans      &trans      &trans       &trans    &trans  
-   &trans     &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)         &trans    &kp C_PP    &trans      &trans       &trans    &trans
-   &trans     &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)         &trans    &kp C_PREV  &kp C_NEXT  &kp LC(FSLH) &trans    &trans
+   &trans   &bt BT_CLR  &sk LALT    &sk LCTRL   &sk LSHFT   &bt BT_SEL 0            &trans    &trans      &trans      &trans       &trans    &trans  
+   &trans   &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)         &trans    &kp C_PP    &trans      &trans       &trans    &trans
+   &trans   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)         &trans    &kp C_PREV  &kp C_NEXT  &kp LC(FSLH) &trans    &trans
                                                &trans   &trans  &trans          &trans   &trans    &trans
                         >;
                 };
