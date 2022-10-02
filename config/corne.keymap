@@ -30,7 +30,7 @@
                         label = "mo_tog";
                         flavor = "hold-preferred";
                         tapping-term-ms = <200>;
-                        bindings = <&mo, <&tog>;
+                        bindings = <&mo>, <&tog>;
                 };
         };
 
