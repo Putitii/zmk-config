@@ -105,9 +105,9 @@
 //                |      |     |     |         |     |     |     |
 
                         bindings = <
-   &trans     &trans      &kp LALT      &kp LCTRL    &kp LSHFT   &trans            &trans       &trans      &trans       &trans   &trans    &trans  
-   &trans     &kp LC(A)   &kp LC(S)     &trans       &kp LC(F)    &LC(G)           &trans      &trans      &trans       &trans   &trans    &trans
-   &trans     &kp LC(Z)   &kp LC(X)     &trans       &trans      &trans            &trans       &trans      &trans       &trans   &trans   &trans
+   &trans     &trans      &sk LALT      &sk LCTRL    &sk LSHFT   &trans            &trans      &trans      &trans       &trans   &trans    &trans  
+   &trans     &kp LC(A)   &kp LC(S)     &trans       &kp LC(F)   &kp LC(G)         &trans      &trans      &trans       &trans   &trans    &trans
+   &trans     &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)   &kp LC(B)         &trans      &trans      &trans       &trans   &trans   &trans
                                                &trans   &trans  &trans          &trans   &trans    &trans
                         >;
                 };
