@@ -99,15 +99,15 @@
 
                 layer_4 {
 // -----------------------------------------------------------------------------------
-// |   |    |LALT |LCTRL |LSHFT|     |         |     |     |     |     |BTCLR|    |
-// |   |    |     |      |     |     |         |PLAY | PRV | NXT |     | BT1 |    |
-// |   |    |     |      |     |     |         |     |     |     |     | BT2 |    |
-//                |      |     |     |         |     |     |     |
+// |    |    |LALT |LCTRL |LSHFT|     |         |     |     |     |     |BTCLR|    |
+// |    | ca | cs  |      |  cf | cg  |         |     |PLAY |     |     | BT1 |    |
+// |    | cz | cx  |  cc  | cv  | cb  |         |     | PREV| NXT |     | BT2 |    |
+//                |       |     |     |         |     |     |     |
 
                         bindings = <
    &trans     &trans      &sk LALT      &sk LCTRL    &sk LSHFT   &trans            &trans      &trans      &trans       &trans   &trans    &trans  
-   &trans     &kp LC(A)   &kp LC(S)     &trans       &kp LC(F)   &kp LC(G)         &trans      &trans      &trans       &trans   &trans    &trans
-   &trans     &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)   &kp LC(B)         &trans      &trans      &trans       &trans   &trans   &trans
+   &trans     &kp LC(A)   &kp LC(S)     &trans       &kp LC(F)   &kp LC(G)         &trans      &kp C_PP    &trans       &trans   &trans    &trans
+   &trans     &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)   &kp LC(B)         &trans      &kp C_PREV  &kp C_NEXT   &trans   &trans   &trans
                                                &trans   &trans  &trans          &trans   &trans    &trans
                         >;
                 };
