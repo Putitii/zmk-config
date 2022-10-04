@@ -76,7 +76,7 @@
 
                         bindings = <
    &trans   &kp N1     &kp N2      &kp N3     &kp N4    &kp N5           &kp N6          &kp N7      &kp N8      &kp N9      &kp N0    &trans
-   &trans   &kp EXCL   &kp AT      &kp HASH   &kp DLLR  &kp PRCNT        &kp TILDE       &kp LGUI    &sk LGUI    &trans      &trans    &trans  
+   &trans   &kp EXCL   &kp AT      &kp HASH   &kp DLLR  &kp PRCNT        &kp GRAVE       &kp LGUI    &sk LGUI    &trans      &trans    &trans  
    &trans   &kp PIPE   &kp BSLH    &kp AMPS   &kp STAR  &kp CARET        &kp LS(LA(UP))  &trans      &kp COMMA   &kp DOT     &kp FSLH   &trans  
                             	&trans     &kp SPACE   &kp ENTER      &trans     &trans     &trans
                         >;
