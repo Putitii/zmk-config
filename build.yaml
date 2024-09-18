@@ -9,8 +9,8 @@ include:
   - board: nice_nano_v2
     shield: dactyls_right
 
-  - board: nice_nano_v2
-    shield: rev41_oled
+  # - board: nice_nano_v2
+  #   shield: rev41_oled
 
   - board: nice_nano_v2
     shield: putiti60
