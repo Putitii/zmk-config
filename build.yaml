@@ -5,7 +5,6 @@ include:
 
   - board: nice_nano_v2
     shield: dactyls_left
-
   - board: nice_nano_v2
     shield: dactyls_right
 
@@ -20,4 +19,9 @@ include:
 
   - board: nice_nano_v2
     shield: putiti36_oled
+  
+  - board: nice_nano_v2
+    shield: choc-corne_left
+  - board: nice_nano_v2
+    shield: choc-corne_right
     
