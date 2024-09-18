@@ -54,8 +54,6 @@
 
 &pro_micro_i2c {
 	status = "okay";
-    scl-pin = <17>;
-	sda-pin = <20>;
 	oled: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
