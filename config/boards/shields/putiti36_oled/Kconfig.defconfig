@@ -30,5 +30,4 @@ endif # ZMK_DISPLAY
 #choice LVGL_COLOR_DEPTH
 #	default LVGL_COLOR_DEPTH_1
 #endchoice
-
-endif # LVGL
+#endif # LVGL
