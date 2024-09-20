@@ -1,0 +1,79 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT 0
+#define LOWER 1
+#define RAISE 2
+#define TOGGLE 3
+#define L4 4
+
+&lt {
+        flavor = "balanced";
+        tapping-term-ms = <150>;
+};
+
+/ {
+        behaviors {
+                mo_tog: behavior_mo_tog {
+                        compatible = "zmk,behavior-hold-tap";
+                        display-name = "mo_tog";
+                        flavor = "hold-preferred";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;
+                        bindings = <&mo>, <&tog>;
+                };        
+        };
+
+
+	keymap {
+		compatible = "zmk,keymap";
+//Quero color o backspace num mo_tog com outra layer
+//- Fazer alt tab com uma mao
+//- Fazer tab, esc, control v, controlxx com uma mao
+		qwert_layer {
+			bindings = <
+                &kp Q   &kp W   &kp E    &kp R      &kp T            &kp Y     &kp U   &kp I      &kp O    &kp P
+                &kp A   &kp S   &kp D    &kp F      &kp G            &kp H     &kp J   &kp K      &kp L    &kp SEMI
+                &kp Z   &kp X   &kp C    &kp V      &kp B            &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                &trans  &trans  &kp LGUI &kp SPACE  &mt LSHFT ENTER  &kp BSPC  &mo 1   &mo 2      &trans   &trans
+			>;
+		};
+
+		lower_layer {
+			bindings = <
+                &kp ESC  &kp LG(LEFT) &kp UP    &kp LG(RIGHT)  &kp PG_UP      &kp EQUAL   &kp LBRC   &kp RBRC   &trans   &kp DEL    
+                &kp TAB  &kp LEFT     &kp DOWN  &kp RIGHT      &kp PAGE_DOWN  &kp MINUS   &kp LPAR   &kp RPAR   &trans   &trans     
+                &trans   &kp SQT      &kp BSLH  &kp RBKT       &trans         &kp SQT     &kp LBKT   &kp RBKT   &trans   &sk LSHFT 
+                &trans   &trans       &sk LGUI  &sk LALT       &trans         &trans      &trans     &trans     &trans   &trans      
+                        >; 
+                };
+
+		raise_layer {
+			bindings = <
+                &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6          &kp N7     &kp N8      &kp N9    &kp N0
+                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp GRAVE       &kp LGUI   &sk LGUI    &trans    &trans  
+                &kp PIPE   &kp BSLH   &kp AMPS   &kp STAR   &kp CARET  &kp LS(LA(UP))  &trans     &kp COMMA   &kp DOT   &kp FSLH  
+                &trans     &trans     &trans     &kp SPACE  &kp ENTER  &trans          &trans     &trans      &trans    &trans      
+                        >;
+		};
+
+		layer_3 {
+			bindings = <
+                &kp N1   &kp N2   &kp N3   &kp N4    &kp N5     &kp N6   &kp N7   &kp N8     &kp N9   &kp N0
+                &kp F1   &kp F2   &kp F3   &kp F4    &kp F5     &kp F6   &kp F7   &kp F8     &kp F9   &kp F10
+                &trans   &trans   &trans   &trans    &trans     &kp F11  &kp F12  &kp COMMA  &kp DOT  &kp FSLH
+                &trans   &trans   &trans   &kp SPACE &kp ENTER  &trans   &trans   &trans     &trans   &trans
+                        >;
+                };
+
+                layer_4 {
+			bindings = <
+                &bt BT_CLR  &sk LALT   &sk LCTRL  &sk LSHFT  &bt BT_NXT  &trans   &trans    &trans      &trans      &bootloader  
+                &kp LG(A)   &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)   &trans   &trans    &trans      &trans      &sys_reset      
+                &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)   &trans   &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp LG(FSLH)
+                &trans      &trans     &trans     &trans     &trans      &trans   &trans    &mo 3      &trans       &trans
+                        >;
+                };
+        };
+};
