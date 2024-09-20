@@ -1,4 +1,4 @@
-#include "dactyl.dtsi"
+#include "putiti40.dtsi"
 
 &kscan0   {
     col-gpios
