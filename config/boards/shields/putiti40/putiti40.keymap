@@ -32,6 +32,7 @@
 //- Fazer alt tab com uma mao
 //- Fazer tab, esc, control v, controlxx com uma mao
 		qwert_layer {
+                        display-name = "Base";
 			bindings = <
                 &kp Q   &kp W   &kp E    &kp R      &kp T            &kp Y     &kp U   &kp I      &kp O    &kp P
                 &kp A   &kp S   &kp D    &kp F      &kp G            &kp H     &kp J   &kp K      &kp L    &kp SEMI
@@ -41,6 +42,7 @@
 		};
 
 		lower_layer {
+                        display-name = "FN 1";
 			bindings = <
                 &kp ESC  &kp LG(LEFT) &kp UP    &kp LG(RIGHT)  &kp PG_UP      &kp EQUAL   &kp LBRC   &kp RBRC   &trans   &kp DEL    
                 &kp TAB  &kp LEFT     &kp DOWN  &kp RIGHT      &kp PAGE_DOWN  &kp MINUS   &kp LPAR   &kp RPAR   &trans   &trans     
@@ -50,6 +52,7 @@
                 };
 
 		raise_layer {
+                        display-name = "NUM & SYM";
 			bindings = <
                 &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6          &kp N7     &kp N8      &kp N9    &kp N0
                 &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp GRAVE       &kp LGUI   &sk LGUI    &trans    &trans  
@@ -59,6 +62,7 @@
 		};
 
 		layer_3 {
+                        display-name = "FNs";
 			bindings = <
                 &kp N1   &kp N2   &kp N3   &kp N4    &kp N5     &kp N6   &kp N7   &kp N8     &kp N9   &kp N0
                 &kp F1   &kp F2   &kp F3   &kp F4    &kp F5     &kp F6   &kp F7   &kp F8     &kp F9   &kp F10
@@ -68,6 +72,7 @@
                 };
 
                 layer_4 {
+                        display-name = "BT";
 			bindings = <
                 &bt BT_CLR  &sk LALT   &sk LCTRL  &sk LSHFT  &bt BT_NXT  &trans   &trans    &trans      &trans      &bootloader  
                 &kp LG(A)   &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)   &trans   &trans    &trans      &trans      &sys_reset      
