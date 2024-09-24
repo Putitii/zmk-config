@@ -34,10 +34,10 @@
 		qwert_layer {
                         display-name = "Base";
 			bindings = <
-                &kp Q   &kp W   &kp E    &kp R      &kp T            &kp Y     &kp U   &kp I      &kp O    &kp P
-                &kp A   &kp S   &kp D    &kp F      &kp G            &kp H     &kp J   &kp K      &kp L    &kp SEMI
-                &kp Z   &kp X   &kp C    &kp V      &kp B            &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH
-                &trans  &trans  &kp LGUI &kp SPACE  &mt LSHFT ENTER  &kp BSPC  &mo 1   &mo 2      &trans   &trans
+                &kp Q     &kp W    &kp E    &kp R      &kp T            &kp Y     &kp U   &kp I      &kp O   &kp P
+                &kp A     &kp S    &kp D    &kp F      &kp G            &kp H     &kp J   &kp K      &kp L   &kp SEMI
+                &kp Z     &kp X    &kp C    &kp V      &kp B            &kp N     &kp M   &kp COMMA  &kp DOT &kp FSLH
+                &kp LCTRL &kp LALT &kp LGUI &kp SPACE  &mt LSHFT ENTER  &kp BSPC  &mo 1   &mo 2      &mo 3   &mo 4
 			>;
 		};
 
@@ -54,10 +54,10 @@
 		raise_layer {
                         display-name = "NUM & SYM";
 			bindings = <
-                &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6          &kp N7     &kp N8      &kp N9    &kp N0
-                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp GRAVE       &kp LGUI   &sk LGUI    &trans    &trans  
-                &kp PIPE   &kp BSLH   &kp AMPS   &kp STAR   &kp CARET  &kp LS(LA(UP))  &trans     &kp COMMA   &kp DOT   &kp FSLH  
-                &trans     &trans     &trans     &kp SPACE  &kp ENTER  &trans          &trans     &trans      &trans    &trans      
+                &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6          &kp N7   &kp N8      &kp N9    &kp N0
+                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp GRAVE       &trans   &sk LGUI    &trans    &trans  
+                &kp PIPE   &kp BSLH   &kp AMPS   &kp STAR   &kp CARET  &kp LS(LA(UP))  &trans   &kp COMMA   &kp DOT   &kp FSLH  
+                &trans     &trans     &trans     &kp SPACE  &kp ENTER  &trans          &trans   &trans      &trans    &trans      
                         >;
 		};
 
@@ -66,7 +66,7 @@
 			bindings = <
                 &kp N1   &kp N2   &kp N3   &kp N4    &kp N5     &kp N6   &kp N7   &kp N8     &kp N9   &kp N0
                 &kp F1   &kp F2   &kp F3   &kp F4    &kp F5     &kp F6   &kp F7   &kp F8     &kp F9   &kp F10
-                &trans   &trans   &trans   &trans    &trans     &kp F11  &kp F12  &kp COMMA  &kp DOT  &kp FSLH
+                &kp F11  &kp F12  &trans   &trans    &trans     &trans   &trans   &kp COMMA  &kp DOT  &kp FSLH
                 &trans   &trans   &trans   &kp SPACE &kp ENTER  &trans   &trans   &trans     &trans   &trans
                         >;
                 };
@@ -74,10 +74,10 @@
                 layer_4 {
                         display-name = "BT";
 			bindings = <
-                &bt BT_CLR  &sk LALT   &sk LCTRL  &sk LSHFT  &bt BT_NXT  &trans   &trans    &trans      &trans      &bootloader  
-                &kp LG(A)   &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)   &trans   &trans    &trans      &trans      &sys_reset      
-                &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)   &trans   &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp LG(FSLH)
-                &trans      &trans     &trans     &trans     &trans      &trans   &trans    &mo 3      &trans       &trans
+                &bt BT_CLR  &sk LALT  &sk LCTRL  &sk LSHFT  &bt BT_NXT &trans   &trans    &trans      &trans      &bootloader  
+                &trans      &trans    &trans     &trans     &trans     &trans   &trans    &trans      &trans      &sys_reset      
+                &trans      &trans    &trans     &trans     &trans     &trans   &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp LG(FSLH)
+                &trans      &trans    &trans     &trans     &trans     &trans   &trans    &mo 3      &trans       &trans
                         >;
                 };
         };
