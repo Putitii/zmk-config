@@ -44,10 +44,10 @@
 		lower_layer {
                         display-name = "FN 1";
 			bindings = <
-                &kp ESC   &kp LG(LEFT) &kp UP    &kp LG(RIGHT)  &kp PG_UP      &kp EQUAL   &kp LBRC   &kp RBRC   &trans   &kp DEL    
-                &kp TAB   &kp LEFT     &kp DOWN  &kp RIGHT      &kp PAGE_DOWN  &kp MINUS   &kp LPAR   &kp RPAR   &trans   &trans     
-                &trans    &kp SQT      &kp BSLH  &kp RBKT       &trans         &kp SQT     &kp LBKT   &kp RBKT   &trans   &sk LSHFT 
-                &sk LGUI  &trans       &trans    &sk LALT       &trans         &trans      &trans     &trans     &trans   &trans      
+                &kp ESC   &kp LCTRL(LEFT) &kp UP    &kp LCTRL(RIGHT) &kp PG_UP      &kp EQUAL   &kp LBRC   &kp RBRC   &trans   &kp DEL    
+                &kp TAB   &kp LEFT        &kp DOWN  &kp RIGHT        &kp PAGE_DOWN  &kp MINUS   &kp LPAR   &kp RPAR   &trans   &trans     
+                &trans    &kp SQT         &kp BSLH  &kp RBKT         &trans         &kp SQT     &kp LBKT   &kp RBKT   &trans   &sk LSHFT 
+                &sk LGUI  &trans          &trans    &sk LALT         &trans         &trans      &trans     &trans     &trans   &trans      
                         >; 
                 };
 
