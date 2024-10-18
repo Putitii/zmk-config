@@ -28,9 +28,6 @@
 
 	keymap {
 		compatible = "zmk,keymap";
-//Quero color o backspace num mo_tog com outra layer
-//- Fazer alt tab com uma mao
-//- Fazer tab, esc, control v, controlxx com uma mao
 		qwert_layer {
                         display-name = "Base";
 			bindings = <
