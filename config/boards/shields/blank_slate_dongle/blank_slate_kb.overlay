@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "boards/lpgalaxy_blank_slate/lpgalaxy_blank_slate.dts";
+#include "boards/lpgalaxy_blank_slate/lpgalaxy_blank_slate.dts"
 
 / {
     chosen {
