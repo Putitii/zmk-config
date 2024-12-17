@@ -1,0 +1,145 @@
+/*
+ * Copyright (c) 2022 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+	model = "blank_slate";
+	compatible = "lpgalaxy,blank_slate";
+
+	chosen {
+		zephyr,code-partition = &code_partition;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zmk,battery = &vbatt;
+		zephyr,console = &cdc_acm_uart0;
+	};
+
+	aliases {
+		led0 = &blue_led;
+	};
+
+	behaviors {
+		hw_soft_off: behavior_hw_soft_off {
+			compatible = "zmk,behavior-soft-off";
+			#binding-cells = <0>;
+			label = "HW_SO";
+			hold-time-ms = <1000>;
+		};
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		blue_led: led_0 {
+			gpios = <&gpio0 16 GPIO_ACTIVE_HIGH>;
+			label = "Blue LED";
+		};
+	};
+
+	keys {
+		compatible = "gpio-keys";
+		wakeup_key: wakeup_key {
+			gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		};
+	};
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-nrf-vddh";
+		label = "BATTERY";
+	};
+
+	wakeup_source: wakeup_source {
+		compatible = "zmk,gpio-key-wakeup-trigger";
+
+		trigger = <&wakeup_key>;
+		wakeup-source;
+		extra-gpios 
+			= <&gpio0 12 GPIO_ACTIVE_HIGH>
+			;
+	};
+
+	soft_off_behavior_key {
+		compatible = "zmk,gpio-scanned-key-behavior-trigger";
+		status = "okay";
+		bindings = <&hw_soft_off>;
+		key = <&wakeup_key>;
+	};
+
+	soft_off_wakers {
+		compatible = "zmk,soft-off-wakeup-sources";
+		wakeup-sources = <&wakeup_source>;
+	};
+
+	soft_on_off {
+		compatible = "zmk,soft-on-off-gpio";
+
+		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		wakeup-sources = <&kscan>;
+		output-gpios 
+			= <&gpio0 12 GPIO_ACTIVE_HIGH>
+			;
+	};
+
+};
+
+&adc {
+	status = "okay";
+};
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
+
+
+&usbd {
+	status = "okay";
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+}; 
+
+
+&flash0 {
+	/*
+	 * For more information, see:
+	 * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
+	 */
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		sd_partition: partition@0 {
+			label = "mbr";
+			reg = <0x00000000 0x00001000>;
+		};
+		code_partition: partition@1000 {
+			label = "code_partition";
+			reg = <0x00001000 0x000d3000>;
+		};
+
+		storage_partition: partition@d4000 {
+			label = "storage";
+			reg = <0x000d4000 0x00020000>;
+		};
+
+		boot_partition: partition@f4000 {
+			label = "adafruit_boot";
+			reg = <0x000f4000 0x0000c000>;
+		};
+	};
+};
