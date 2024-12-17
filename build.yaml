@@ -44,7 +44,7 @@ include:
     shield: blank_slate_kb
   - board: nice_nano_v2
     shield: blank_slate_dongle
-  # - board: lpgalaxy_blank_slate
-  #   shield: settings_reset
+  - board: lpgalaxy_blank_slate
+    shield: settings_reset
 
     
