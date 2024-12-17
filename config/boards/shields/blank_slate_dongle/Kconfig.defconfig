@@ -1,6 +1,6 @@
 if SHIELD_BLANK_SLATE_DONGLE
 	config ZMK_KEYBOARD_NAME
-		default "slate_dongle_oled"
+		default "slate_dongle"
 	
 	config ZMK_SPLIT_ROLE_CENTRAL
     	default y
