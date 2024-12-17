@@ -42,7 +42,7 @@ include:
     shield: blank_slate_dongle
   - board: lpgalaxy_blank_slate
     shield: blank_slate_kb
-  - board: lpgalaxy_blank_slate
-    shield: settings_reset
+  # - board: lpgalaxy_blank_slate
+  #   shield: settings_reset
 
     
