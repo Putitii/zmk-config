@@ -1,21 +1,21 @@
-/*
- * Copyright (c) 2022 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
+// /*
+//  * Copyright (c) 2022 Pete Johanson
+//  *
+//  * SPDX-License-Identifier: MIT
+//  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+// #include <behaviors.dtsi>
+// #include <dt-bindings/zmk/keys.h>
+// #include <dt-bindings/zmk/bt.h>
+// #include <dt-bindings/zmk/outputs.h>
 
-/ {
-    chosen {
-        zmk,matrix_transform = &ortho_transform;
-        keymap {
-            compatible = "zmk,keymap";
+// / {
+//     chosen {
+//         zmk,matrix_transform = &ortho_transform;
+//         keymap {
+//             compatible = "zmk,keymap";
 
-        };
-    };
-};
+//         };
+//     };
+// };
 
