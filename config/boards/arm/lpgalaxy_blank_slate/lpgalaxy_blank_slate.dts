@@ -24,14 +24,6 @@
 		led0 = &blue_led;
 	};
 
-	behaviors {
-		hw_soft_off: behavior_hw_soft_off {
-			compatible = "zmk,behavior-soft-off";
-			#binding-cells = <0>;
-			label = "HW_SO";
-			hold-time-ms = <1000>;
-		};
-	};
 
 	leds {
 		compatible = "gpio-leds";
@@ -62,29 +54,6 @@
 			= <&gpio0 12 GPIO_ACTIVE_HIGH>
 			;
 	};
-
-	soft_off_behavior_key {
-		compatible = "zmk,gpio-scanned-key-behavior-trigger";
-		status = "okay";
-		bindings = <&hw_soft_off>;
-		key = <&wakeup_key>;
-	};
-
-	soft_off_wakers {
-		compatible = "zmk,soft-off-wakeup-sources";
-		wakeup-sources = <&wakeup_source>;
-	};
-
-	soft_on_off {
-		compatible = "zmk,soft-on-off-gpio";
-
-		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-		wakeup-sources = <&kscan>;
-		output-gpios 
-			= <&gpio0 12 GPIO_ACTIVE_HIGH>
-			;
-	};
-
 };
 
 &adc {
