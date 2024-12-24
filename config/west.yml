@@ -1,19 +1,19 @@
 manifest:
   remotes:
-    # - name: zmkfirmware
-      # url-base: https://github.com/zmkfirmware
-    - name: manna-harbour
-      url-base: https://github.com/manna-harbour
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    # - name: manna-harbour
+    #   url-base: https://github.com/manna-harbour
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
-
     - name: zmk
-      remote: manna-harbour
-      revision: zephyr-3.0
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
+
+    # - name: zmk
+    #   remote: manna-harbour
+    #   revision: zephyr-3.0
+    #   import: app/west.yml
   self:
     path: config
 
