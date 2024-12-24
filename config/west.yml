@@ -11,9 +11,9 @@ manifest:
     #   import: app/west.yml
 
     - name: zmk
-    remote: manna-harbour
-    revision: zephyr-3.0
-    import: app/west.yml
+      remote: manna-harbour
+      revision: zephyr-3.0
+      import: app/west.yml
   self:
     path: config
 
