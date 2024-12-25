@@ -45,6 +45,7 @@
         segment-remap;
         com-invdir;
         com-sequential;
+        inversion-on; //turn screen to white in black
         prechargep = <0x22>;
     };
 };
