@@ -5,15 +5,14 @@
  */
 
 #include <zephyr/kernel.h>
-#include <zephyr/logging/log.h>
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/display.h>
-#include <zmk/display/widgets/layer_status.h>
 #include <zmk/events/layer_state_changed.h>
 #include <zmk/event_manager.h>
 #include <zmk/endpoints.h>
 #include <zmk/keymap.h>
+#include "layer_status.h"
+
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -26,13 +25,14 @@ static void set_layer_symbol(lv_obj_t *label, struct layer_status_state state) {
     if (state.label == NULL || strlen(state.label) == 0) {
         char text[8] = {};
 
-        snprintf(text, sizeof(text), LV_SYMBOL_KEYBOARD " %i", state.index);
+        snprintf(text, sizeof(text), "%i", state.index);
 
         lv_label_set_text(label, text);
     } else {
         char text[14] = {};
 
-        snprintf(text, sizeof(text), LV_SYMBOL_KEYBOARD " %s", state.label);
+        snprintf(text, sizeof(text),"%s", state.label);
+        LV_SYMBOL_OK
 
         lv_label_set_text(label, text);
     }
