@@ -30,18 +30,24 @@ include:
   # - board: nice_nano_v2
   #   shield: putiti40_dongle
 
-  - board: nice_nano_v2
-    shield: dactyl_left
-  - board: nice_nano_v2
-    shield: dactyl_right
-  - board: nice_nano_v2
-    shield: dactyl_dongle dongle_display
+  # - board: nice_nano_v2
+  #   shield: dactyl_left
+  # - board: nice_nano_v2
+  #   shield: dactyl_right
+  # - board: nice_nano_v2
+  #   shield: dactyl_dongle dongle_display
     # snippet: studio-rpc-usb-uart
     # cmake-args: -DCONFIG_ZMK_STUDIO=y
 
 
-  - board: lpgalaxy_blank_slate 
+  # - board: lpgalaxy_blank_slate 
     # snippet: studio-rpc-usb-uart
-    shield: blank_slate_kb
-  - board: nice_nano_v2
-    shield: blank_slate_dongle dongle_display
+    # shield: blank_slate_kb
+  # - board: nice_nano_v2
+    # shield: blank_slate_dongle dongle_display
+
+  - board: lpgalaxy_blank_slate
+  - board: lpgalaxy_blank_slate
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: lpgalaxy_blank_slate-studio
