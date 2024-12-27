@@ -16,7 +16,7 @@
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
-		zmk,kscan = &side_band_behavior_triggers;
+		// zmk,kscan = &side_band_behavior_triggers;
 		zmk,battery = &vbatt;
 	};
 
@@ -33,16 +33,16 @@
 		};
 	};
 
-	side_band_behavior_triggers: side_band_behavior_triggers {
-		compatible = "zmk,kscan-sideband-behaviors";
-		wakeup-source;
-		// kscan = <&kscan>;
-		soft_off {
-			column = <0>;
-			row = <8>;
-			bindings = <&hw_soft_off>;
-		};
-	};
+	// side_band_behavior_triggers: side_band_behavior_triggers {
+	// 	compatible = "zmk,kscan-sideband-behaviors";
+	// 	wakeup-source;
+	// 	// kscan = <&kscan>;
+	// 	soft_off {
+	// 		column = <0>;
+	// 		row = <8>;
+	// 		bindings = <&hw_soft_off>;
+	// 	};
+	// };
 
 	leds {
 		compatible = "gpio-leds";
