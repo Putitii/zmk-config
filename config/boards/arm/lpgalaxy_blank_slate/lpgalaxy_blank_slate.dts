@@ -16,7 +16,7 @@
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
-		// zmk,kscan = &side_band_behavior_triggers;
+		zmk,kscan = &side_band_behavior_triggers;
 		zmk,battery = &vbatt;
 	};
 
@@ -33,16 +33,16 @@
 		};
 	};
 
-	// side_band_behavior_triggers: side_band_behavior_triggers {
-	// 	compatible = "zmk,kscan-sideband-behaviors";
-	// 	wakeup-source;
-	// 	// kscan = <&kscan>;
-	// 	soft_off {
-	// 		column = <0>;
-	// 		row = <8>;
-	// 		bindings = <&hw_soft_off>;
-	// 	};
-	// };
+	side_band_behavior_triggers: side_band_behavior_triggers {
+		compatible = "zmk,kscan-sideband-behaviors";
+		wakeup-source;
+		kscan = <&kscan>;
+		soft_off {
+			column = <0>;
+			row = <8>;
+			bindings = <&hw_soft_off>;
+		};
+	};
 
 	leds {
 		compatible = "gpio-leds";
@@ -76,7 +76,38 @@
 		compatible = "zmk,soft-off-wakeup-sources";
 		wakeup-sources = <&wakeup_source>;
 	};
+
+	kscan: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+		wakeup-source;
+		debounce-press-ms = <1>;
+		debounce-release-ms = <5>;
+
+		diode-direction = "col2row";
+
+		col-gpios
+			= <&gpio0 12 (GPIO_ACTIVE_HIGH)>
+			, <&gpio1 9  (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 8  (GPIO_ACTIVE_HIGH)>
+			, <&gpio1 8  (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 11 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 6  (GPIO_ACTIVE_HIGH)>
+			;
+		row-gpios
+			= <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			;
+	};
 };
+
+
 
 &adc {
 	status = "okay";

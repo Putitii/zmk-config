@@ -3,27 +3,26 @@
 
 if BOARD_LPGALAXY_BLANK_SLATE
 
-
-
 config BOARD
-    default "lpgalaxy_blank_slate"
+	default "lpgalaxy_blank_slate"
 
-if USB_DEVICE_STACK
+if USB
 
 config USB_NRFX
-    default y
+	default y
 
-endif # USB_DEVICE_STACK
+config USB_DEVICE_STACK
+	default y
+
+endif # USB
 
 config BT_CTLR
-    default BT
-
+	default BT
 
 config ZMK_BLE
 	default y
 
 config ZMK_USB
 	default y
-
 
 endif # BOARD_LPGALAXY_BLANK_SLATE
