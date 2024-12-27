@@ -5,9 +5,8 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
-        
+
 		qwert_layer {
-            display-name = "Base";
 			bindings = <
                &kp TAB   &kp Q   &kp W    &kp E     &kp R      &kp T      &kp Y     &kp U   &kp I      &kp O   &kp P       &kp DEL
                &kp LSHFT &kp A   &kp S    &kp D     &kp F      &kp G      &kp H     &kp J   &kp K      &kp L   &kp SEMI    &kp C_VOL_UP
@@ -17,7 +16,6 @@
 		};
 
 		lower_layer {
-            display-name = "FN 1";
 			bindings = <
                 &kp ESC &trans  &kp LG(LEFT) &kp UP    &kp LG(RIGHT) &kp PG_UP      &kp EQUAL   &kp LBRC   &kp RBRC   &trans   &trans  &trans  
                 &trans  &trans  &kp LEFT     &kp DOWN  &kp RIGHT     &kp PAGE_DOWN  &kp MINUS   &kp LPAR   &kp RPAR   &trans   &trans  &trans  
@@ -27,7 +25,6 @@
        };  
 
 		raise_layer {
-            display-name = "NUM & SYM";
 			bindings = <
                 &trans  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6          &kp N7   &kp N8   &kp N9  &kp N0  &trans
                 &trans  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp GRAVE       &trans   &trans   &trans  &trans  &trans
@@ -37,7 +34,6 @@
 		};
 
 		layer_3 {
-            display-name = "Fs & BT";
 			bindings = <
                 &kp F1  &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9     &kp F10   &kp F11   &kp F12
                 &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans     &bootloader
