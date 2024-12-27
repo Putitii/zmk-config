@@ -41,9 +41,9 @@ include:
 
 
   - board: lpgalaxy_blank_slate 
-    shield: blank_slate_kb
+    shield: blank-slate_kb
   - board: nice_nano_v2
-    shield: blank_slate_dongle dongle_display
+    shield: blank-slate_dongle dongle_display
 
   # - board: lpgalaxy_blank_slate
   # - board: lpgalaxy_blank_slate

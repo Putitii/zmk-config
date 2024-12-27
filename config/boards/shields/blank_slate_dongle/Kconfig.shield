@@ -1,6 +1,0 @@
-config SHIELD_BLANK_SLATE_KB
-    def_bool $(shields_list_contains,blank_slate_kb)
-
-config SHIELD_BLANK_SLATE_DONGLE
-    def_bool $(shields_list_contains,blank_slate_dongle)
-
