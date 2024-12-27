@@ -1,7 +1,1 @@
 #include "../../../keymaps/4x12.keymap"
-
-// / {
-//     chosen {
-//        zmk,physical-layout = &layout_ortho_4x12_all1u;
-//     };
-// };

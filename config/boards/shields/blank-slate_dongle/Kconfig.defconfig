@@ -2,11 +2,11 @@ if SHIELD_BLANK_SLATE_DONGLE
 	config ZMK_KEYBOARD_NAME
 		default "slate_dongle"
 	
-	config ZMK_SPLIT_ROLE_CENTRAL
-    	default y
+#	config ZMK_SPLIT_ROLE_CENTRAL
+#    	default y
 endif
 
 if SHIELD_BLANK_SLATE_KB || SHIELD_BLANK_SLATE_DONGLE
-	config ZMK_SPLIT
-    	default y
+#	config ZMK_SPLIT
+ #   	default y
 endif
