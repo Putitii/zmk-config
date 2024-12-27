@@ -19,11 +19,11 @@ config BT_CTLR
     default BT
 
 
-#config ZMK_BLE
-#	default y
+config ZMK_BLE
+	default y
 
-#config ZMK_USB
-#	default y
+config ZMK_USB
+	default y
 
 
 endif # BOARD_LPGALAXY_BLANK_SLATE
