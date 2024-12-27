@@ -7,7 +7,6 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "lpgalaxy_blank_slate-layouts.dtsi"
 
 / {
 	model = "blank_slate";
