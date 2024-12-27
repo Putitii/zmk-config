@@ -40,6 +40,8 @@ include:
     # cmake-args: -DCONFIG_ZMK_STUDIO=y
 
 
+  - board: lpgalaxy_blank_slate
+    shield: settings_reset
   - board: lpgalaxy_blank_slate 
     shield: blank-slate_kb
   # - board: nice_nano_v2
