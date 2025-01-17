@@ -3,7 +3,7 @@
 
 / {
     chosen {
-        zmk,physical-layout = &default_layout;
+        zmk,physical-layout = &layout_ortho_4x12_all1u;
     };
 
     layout_ortho_4x12_all1u: layout_ortho_4x12_all1u {
