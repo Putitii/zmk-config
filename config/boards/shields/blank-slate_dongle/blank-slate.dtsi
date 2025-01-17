@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "blank-slate-layouts.dtsi"
 
+
+&layout_ortho_4x12_all1u {
+	transform = <&ortho_transform>;
+};
+
 / {
     chosen {
         zmk,kscan = &kscan;
