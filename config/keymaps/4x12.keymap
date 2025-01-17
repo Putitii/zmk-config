@@ -3,10 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    chosen {
-       zmk,physical-layout = &layout_ortho_4x12_all1u;
-    };
-
 	keymap {
 		compatible = "zmk,keymap";
 
