@@ -20,7 +20,7 @@
                 &kp ESC &trans  &kp LG(LEFT) &kp UP    &kp LG(RIGHT) &kp PG_UP      &kp EQUAL   &kp LBRC   &kp RBRC   &trans   &trans  &trans  
                 &trans  &trans  &kp LEFT     &kp DOWN  &kp RIGHT     &kp PAGE_DOWN  &kp MINUS   &kp LPAR   &kp RPAR   &trans   &trans  &trans  
                 &trans  &trans  &kp SQT      &kp BSLH  &kp RBKT      &trans         &kp SQT     &kp LBKT   &kp RBKT   &trans   &trans  &trans
-                &trans  &trans  &trans       &trans    &trans        &trans         &trans      &trans     &trans     &trans   &trans  &trans  
+                &trans  &trans  &trans       &trans    &trans        &trans         &trans      &trans     &trans     &trans   &trans  &studio_unlock  
             >; 
        };  
 

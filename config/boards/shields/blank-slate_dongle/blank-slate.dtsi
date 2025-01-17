@@ -1,10 +1,13 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "blank-slate-layouts.dtsi"
 
 / {
     chosen {
         zmk,kscan = &kscan;
         zmk,matrix-transform = &ortho_transform;
+	    zmk,physical-layout = &layout_ortho_4x12_all1u;
+
     };
 
     ortho_transform: ortho_transform {
