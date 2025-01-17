@@ -7,12 +7,11 @@
         zmk,kscan = &kscan;
         zmk,matrix-transform = &ortho_transform;
 	    zmk,physical-layout = &layout_ortho_4x12_all1u;
-
+		
+		&layout_ortho_4x12_all1u {
+			transform = <&ortho_transform>;
+		};	
     };
-
-	&layout_ortho_4x12_all1u {
-		transform = <&ortho_transform>;
-	};	
 
     ortho_transform: ortho_transform {
         compatible = "zmk,matrix-transform";
