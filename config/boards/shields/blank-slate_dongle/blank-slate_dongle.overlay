@@ -3,7 +3,6 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        // zmk,matrix-transform = &ortho_transform;
         zmk,physical-layout = &layout_ortho_4x12_all1u;
         zephyr,display = &oled;
     };
