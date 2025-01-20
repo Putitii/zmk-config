@@ -6,7 +6,7 @@
 
 &layout_dactyl_5x10plus5 {
     transform = <&default_transform>;
-}
+};
 
 / {
     chosen {
