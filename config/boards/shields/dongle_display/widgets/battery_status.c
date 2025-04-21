@@ -96,7 +96,7 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
         lv_obj_t *image_canvas = lv_canvas_create(widget->obj);
         lv_obj_t *battery_label = lv_label_create(widget->obj);
 
-        lv_canvas_set_buffer(image_canvas, battery_image_buffer[i], 5, 8, LV_IMG_CF_TRUE_COLOR);
+        lv_canvas_set_buffer(image_canvas, battery_image_buffer[0], 5, 8, LV_IMG_CF_TRUE_COLOR);
 
         // Center-align each peripheral battery section
         lv_obj_align(image_canvas, LV_ALIGN_CENTER, 0, index * 20); // Adjust 20 for spacing between widgets
