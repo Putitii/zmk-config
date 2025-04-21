@@ -59,7 +59,7 @@ static void set_battery_symbol(lv_obj_t *widget, struct peripheral_battery_state
         // lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
     } else {
-        lv_label_set_text_fmt(label, "0%%", state.level);
+        lv_label_set_text_fmt(label, "0%%");
 
         // lv_obj_add_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
