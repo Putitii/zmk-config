@@ -30,7 +30,8 @@ static void set_battery_symbol(lv_obj_t *widget, struct peripheral_battery_state
     if (state.level > 0) {
         lv_label_set_text_fmt(label, "%3u%%", state.level);
     } else {
-        lv_label_set_text_fmt(label, "0%%");
+        lv_label_set_text(label, "0%");
+        lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
     }
 }
 
