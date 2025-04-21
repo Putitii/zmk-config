@@ -91,28 +91,15 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
 
     lv_obj_set_size(widget->obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
-    // For single peripheral
-    if(ZMK_SPLIT_BLE_PERIPHERAL_COUNT == 1) {
+    // For multiple peripherals
+    for (int i = 0; i < ZMK_SPLIT_BLE_PERIPHERAL_COUNT; i++) {
         lv_obj_t *image_canvas = lv_canvas_create(widget->obj);
         lv_obj_t *battery_label = lv_label_create(widget->obj);
 
-        lv_canvas_set_buffer(image_canvas, battery_image_buffer[0], 5, 8, LV_IMG_CF_TRUE_COLOR);
+        lv_canvas_set_buffer(image_canvas, battery_image_buffer[i], 5, 8, LV_IMG_CF_TRUE_COLOR);
 
-        // Center-align each peripheral battery section
-        lv_obj_align(image_canvas, LV_ALIGN_CENTER, 0, 0); // Adjust 20 for spacing between widgets
-        lv_obj_align(battery_label, LV_ALIGN_CENTER, -7, 0); // Adjust -7 for label position
-    }
-    else {
-        // For multiple peripherals
-        for (int i = 0; i < ZMK_SPLIT_BLE_PERIPHERAL_COUNT; i++) {
-            lv_obj_t *image_canvas = lv_canvas_create(widget->obj);
-            lv_obj_t *battery_label = lv_label_create(widget->obj);
-    
-            lv_canvas_set_buffer(image_canvas, battery_image_buffer[i], 5, 8, LV_IMG_CF_TRUE_COLOR);
-    
-            lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, 0, i * 10);
-            lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, i * 10);
-        }
+        lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, 0, i * 10);
+        lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, i * 10);
     }
 
     sys_slist_append(&widgets, &widget->node);
