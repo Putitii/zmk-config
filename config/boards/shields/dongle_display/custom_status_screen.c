@@ -43,9 +43,9 @@ lv_obj_t *zmk_display_status_screen() {
     // lv_obj_align(zmk_widget_output_status_obj(&layer_status_widget), LV_ALIGN_BOTTOM_RIGHT, 0, 0);
 
     // Layer Status Widget
-    zmk_widget_layer_status_init(&layer_status_widget, screen);
-    lv_obj_set_style_text_font(zmk_widget_layer_status_obj(&layer_status_widget),lv_theme_get_font_small(screen), LV_PART_MAIN);
-    lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), LV_ALIGN_BOTTOM_RIGHT, 0, 0);
+    // zmk_widget_layer_status_init(&layer_status_widget, screen);
+    // lv_obj_set_style_text_font(zmk_widget_layer_status_obj(&layer_status_widget),lv_theme_get_font_small(screen), LV_PART_MAIN);
+    // lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), LV_ALIGN_BOTTOM_RIGHT, 0, 0);
 
     // Battery Level Widget
     zmk_widget_peripheral_battery_status_init(&peripheral_battery_status_widget, screen);
@@ -54,3 +54,27 @@ lv_obj_t *zmk_display_status_screen() {
 
     return screen;
 }
+
+/*
+
+lv_obj_t *zmk_display_status_screen() {
+    lv_obj_t *screen;
+
+    screen = lv_obj_create(NULL);
+
+    lv_style_init(&global_style);
+    // lv_style_set_text_font(&global_style, &lv_font_unscii_8);
+    lv_style_set_text_font(&global_style, &lv_font_unscii_16);
+    lv_style_set_text_letter_space(&global_style, 1);
+    lv_style_set_text_line_space(&global_style, 1);
+    lv_obj_add_style(screen, &global_style, LV_PART_MAIN);
+    
+    // Battery Level Widget
+    zmk_widget_peripheral_battery_status_init(&peripheral_battery_status_widget, screen);
+    // lv_obj_align(zmk_widget_peripheral_battery_status_obj(&peripheral_battery_status_widget), LV_ALIGN_BOTTOM_LEFT, 10, 0);
+    lv_obj_align(zmk_widget_peripheral_battery_status_obj(&peripheral_battery_status_widget), LV_ALIGN_TOP_LEFT, 0, 0);
+
+    return screen;
+}
+
+*/

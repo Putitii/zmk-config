@@ -104,7 +104,18 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
 
         // lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, 0, i * 10);
         // lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, i * 10);
-        lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, 0, i * 10);
+        // lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, 0, i * 10);
+        
+
+
+
+        lv_obj_t *battery_label = lv_label_create(widget->obj);
+
+        lv_obj_set_style_text_color(battery_label, lv_color_white(), 0);
+        lv_obj_set_style_text_font(battery_label, &lv_font_unscii_16, 0);
+    
+        // Each label gets around 50px width, 5px spacing between them
+        lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, i * 60, 0);
     }
 
     sys_slist_append(&widgets, &widget->node);
