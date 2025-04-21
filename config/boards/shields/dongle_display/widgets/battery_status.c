@@ -99,8 +99,8 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
         lv_canvas_set_buffer(image_canvas, battery_image_buffer[0], 5, 8, LV_IMG_CF_TRUE_COLOR);
 
         // Center-align each peripheral battery section
-        lv_obj_align(image_canvas, LV_ALIGN_CENTER, 0, index * 20); // Adjust 20 for spacing between widgets
-        lv_obj_align(battery_label, LV_ALIGN_CENTER, -7, index * 20); // Adjust -7 for label position
+        lv_obj_align(image_canvas, LV_ALIGN_CENTER, 0, 0); // Adjust 20 for spacing between widgets
+        lv_obj_align(battery_label, LV_ALIGN_CENTER, -7, 0); // Adjust -7 for label position
     }
     else {
         // For multiple peripherals
