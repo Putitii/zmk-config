@@ -52,12 +52,15 @@ static void set_battery_symbol(lv_obj_t *widget, struct peripheral_battery_state
     lv_obj_t *label = lv_obj_get_child(widget, state.source * 2 + 1);
 
     draw_battery(symbol, state.level);
-    lv_label_set_text_fmt(label, "%3u%%", state.level);
     
     if (state.level > 0) {
+        lv_label_set_text_fmt(label, "%3u%%", state.level);
+
         lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
     } else {
+        lv_label_set_text_fmt(label, "0%%", state.level);
+
         lv_obj_add_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
     }
