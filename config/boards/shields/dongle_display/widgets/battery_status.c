@@ -39,7 +39,7 @@ static void set_battery_symbol(lv_obj_t *widget, struct peripheral_battery_state
         // lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
     } else {
-        lv_label_set_text_fmt(label, "0%%");
+        lv_label_set_text_fmt(label, "0");
 
         // lv_obj_add_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
@@ -81,7 +81,8 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
         lv_obj_t *battery_label = lv_label_create(widget->obj);
         
         // Each label gets around 50px width, 5px spacing between them
-        lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, i * 60, 0);
+        // lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, i * 60, 0);
+        lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, i * 30, 0);
     }
 
     sys_slist_append(&widgets, &widget->node);
