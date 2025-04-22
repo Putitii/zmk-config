@@ -18,14 +18,30 @@ struct peripheral_battery_state {
     uint8_t level;
 };
     
+// Buffer for battery images
+// static lv_color_t battery_image_buffer[ZMK_SPLIT_BLE_PERIPHERAL_COUNT][5 * 8];
+
 static void set_battery_symbol(lv_obj_t *widget, struct peripheral_battery_state state) {
+    // lv_obj_t *symbol = lv_obj_get_child(widget, state.source * 2);
     lv_obj_t *label = lv_obj_get_child(widget, state.source * 2 + 1);
 
-    lv_label_set_text_fmt(label, "%3u%%", state.level);
+    // lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
+    // if (state.level > 0) {
+    //     lv_label_set_text_fmt(label, "%3u%%", state.level);
+    // } else {
+    //     lv_label_set_text(label, "0%");
+    //     lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
+    // }
     
     if (state.level > 0) {
+        lv_label_set_text_fmt(label, "%3u%%", state.level);
+
+        // lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
     } else {
+        lv_label_set_text_fmt(label, "0");
+
+        // lv_obj_add_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
     }
 }
@@ -49,6 +65,7 @@ static struct peripheral_battery_state battery_status_get_state(const zmk_event_
 }
 
 ZMK_DISPLAY_WIDGET_LISTENER(widget_battery_status, struct peripheral_battery_state,battery_status_update_cb, battery_status_get_state)
+
 ZMK_SUBSCRIPTION(widget_battery_status, zmk_peripheral_battery_state_changed);
 
 
@@ -57,17 +74,21 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
 
     lv_obj_set_size(widget->obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
-    if(ZMK_SPLIT_BLE_PERIPHERAL_COUNT > 0) {
-        // For multiple peripherals
-        for (int i = 0; i < ZMK_SPLIT_BLE_PERIPHERAL_COUNT; i++) {
-            lv_obj_t *battery_label = lv_label_create(widget->obj);
-            // lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, i * 10);
-            lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, 0, i * 10);
-        }
-
-        sys_slist_append(&widgets, &widget->node);
-        widget_battery_status_init();
+    // For multiple peripherals
+    for (int i = 0; i < ZMK_SPLIT_BLE_PERIPHERAL_COUNT; i++) {
+        // for (int i = 0; i < 2; i++) {
+        // lv_obj_t *image_canvas = lv_canvas_create(widget->obj);
+        lv_obj_t *battery_label = lv_label_create(widget->obj);
+        
+        // Each label gets around 50px width, 5px spacing between them
+        // lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, i * 60, 0);
+        lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, i * 30, 0);
     }
+
+    sys_slist_append(&widgets, &widget->node);
+
+    widget_battery_status_init();
+
     return 0;
 }
 
