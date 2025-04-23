@@ -9,7 +9,7 @@
 #include <zmk/event_manager.h>
 #include <zmk/events/battery_state_changed.h>
 
-// #include "battery_status.h"
+#include "battery_status.h"
 
 // static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -164,6 +164,10 @@
     return 0;
 }
  
-lv_obj_t *zmk_widget_battery_status_obj(struct zmk_widget_battery_status *widget) {
+// lv_obj_t *zmk_widget_battery_status_obj(struct zmk_widget_battery_status *widget) {
+//     return widget->obj;
+// }
+
+lv_obj_t *zmk_widget_peripheral_battery_status_obj(struct zmk_widget_peripheral_battery_status *widget) {
     return widget->obj;
 }
