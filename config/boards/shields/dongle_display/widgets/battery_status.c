@@ -148,7 +148,7 @@
  ZMK_SUBSCRIPTION(widget_battery_status, zmk_battery_state_changed);
 
  
- int zmk_widget_battery_status_init(struct zmk_widget_battery_status *widget, lv_obj_t *parent) {
+ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_battery_status *widget, lv_obj_t *parent) {
      widget->obj = lv_label_create(parent);
 
     // for (int i = 0; i < ZMK_SPLIT_BLE_PERIPHERAL_COUNT; i++) {
