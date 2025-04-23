@@ -1,6 +1,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/bluetooth/services/bas.h>
 
+#include <zmk/battery.h>
 #include <zmk/display.h>
 #include <zmk/display/widgets/battery_status.h>
 #include <zmk/usb.h>
@@ -10,6 +11,8 @@
 #include <zmk/events/battery_state_changed.h>
 
 #include "battery_status.h"
+
+
 
 // static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 

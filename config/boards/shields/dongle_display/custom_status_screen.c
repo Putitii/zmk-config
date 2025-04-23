@@ -13,10 +13,12 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-static struct zmk_widget_output_status output_status_widget;
-static struct zmk_widget_layer_status layer_status_widget;
-static struct zmk_widget_peripheral_battery_status peripheral_battery_status_widget;
-static struct zmk_widget_bongo_cat bongo_cat_widget;
+// static struct zmk_widget_output_status output_status_widget;
+// static struct zmk_widget_layer_status layer_status_widget;
+// static struct zmk_widget_peripheral_battery_status peripheral_battery_status_widget;
+static struct zmk_widget_battery_status peripheral_battery_status_widget;
+
+// static struct zmk_widget_bongo_cat bongo_cat_widget;
 
 lv_style_t global_style;
 
