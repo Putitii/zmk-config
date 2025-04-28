@@ -55,8 +55,8 @@ include:
   #   cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   # ----- Blank Slate Keyboard ------
-  # - board: lpgalaxy_blank_slate
-  #   shield: blank-slate_kb
+  - board: lpgalaxy_blank_slate
+    shield: blank-slate_kb
 
   # ----- Blank Slate Dongle ------
   - board: nice_nano_v2
