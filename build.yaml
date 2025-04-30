@@ -39,7 +39,7 @@ include:
 
   # ----- Blank Slate Keyboard W/out Dongle ------
   - board: lpgalaxy_blank_slate
-    shield: blank-slate
+    shield: blk-slate
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
 
