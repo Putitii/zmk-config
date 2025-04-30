@@ -6,6 +6,9 @@ if BOARD_LPGALAXY_BLANK_SLATE
 config BOARD
 	default "lpgalaxy_blank_slate"
 
+config ZMK_KEYBOARD_NAME
+	default "Blank Slate"
+
 if USB
 
 config USB_NRFX
