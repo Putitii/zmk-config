@@ -38,10 +38,11 @@ include:
   #   shield: putiti40_dongle
 
   # ----- Blank Slate Keyboard W/out Dongle ------
-  - board: lpgalaxy_blank_slate
+  # - board: lpgalaxy_blank_slate
+  - board: nice_nano_v2
     shield: blk-slate
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    # snippet: studio-rpc-usb-uart
+    # cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   # ----- Dactyl Left Keyboard ------
   # - board: nice_nano_v2

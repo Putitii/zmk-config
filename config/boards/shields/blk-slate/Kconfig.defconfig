@@ -1,4 +1,6 @@
 if SHIELD_BLK_SLATE
+
 	config ZMK_KEYBOARD_NAME
 		default "Blank Slate"
+		
 endif
