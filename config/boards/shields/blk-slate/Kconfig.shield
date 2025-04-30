@@ -1,0 +1,2 @@
+config SHIELD_BLK_SLATE
+    def_bool $(shields_list_contains,blk-slate)

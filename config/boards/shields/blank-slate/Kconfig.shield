@@ -1,2 +1,0 @@
-config SHIELD_BLANK_SLATE
-    def_bool $(shields_list_contains,blank-slate)
