@@ -1,0 +1,2 @@
+config SHIELD_PUTITI48_CHOC
+    def_bool $(shields_list_contains,putiti48_choc)
