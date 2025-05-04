@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "/layouts/ortho_4x12.dtsi"
+#include "../../../layouts/ortho_4x12.dtsi"
 
 
 / {
