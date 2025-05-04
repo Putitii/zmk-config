@@ -1,12 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "../../../layouts/ortho_4x12.dtsi"
 
+&layout_ortho_4x12_all1u {
+    transform = <&default_transform>;
+};
+
 
 / {
-    &layout_ortho_4x12_all1u {
-        transform = <&default_transform>;
-    };
-
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
