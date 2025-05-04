@@ -42,7 +42,7 @@
                         &trans  &kp ESC  &kp HOME  &kp UP    &kp END    &kp PG_UP               &kp EQUAL  &kp LBRC   &kp RBRC   &trans     &trans  &trans
                         &trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN           &kp MINUS  &kp LPAR   &kp RPAR   &kp GRAVE  &trans  &trans
                         &trans  &trans   &kp SQT   &kp BSLH  &kp RBKT   &trans                  &trans     &kp LBKT   &kp RBKT   &trans     &trans  &trans    
-                                                                 &trans    &trans    &trans   &trans   &trans 
+                                                                 &kp LALT   &trans    &trans   &trans   &trans 
                     >;
                 };
 
