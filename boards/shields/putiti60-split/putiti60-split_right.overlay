@@ -1,0 +1,9 @@
+#include "putiti60-split.dtsi" // The shared dtsi file is included in the overlay
+
+&default_transform { // Offset of 6 because the left side has 6 columns
+    col-offset = <6>;
+};
+
+// &right_encoder {
+//     status = "okay";
+// };

@@ -1,0 +1,6 @@
+#include "putiti60-split.dtsi" // The shared dtsi file is included in the overlay
+
+
+// &left_encoder {
+//     status = "okay";
+// };

@@ -1,0 +1,7 @@
+# No whitespace after the comma or in your part name!
+config SHIELD_PUTITI60-SPLIT_LEFT
+    def_bool $(shields_list_contains, putiti60-split_left)
+
+# No whitespace after the comma or in your part name!
+config SHIELD_PUTITI60-SPLIT_RIGHT
+    def_bool $(shields_list_contains, putiti60-split_right)
