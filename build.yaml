@@ -89,12 +89,19 @@ include:
     shield: putiti48_choc
   # --------------------------
 
-  # ---- Putiti60-split ------
-  - board: nice_nano
-    shield: putiti60-split_left
+    # ----- Putiti48_choc ------
+  - board: nice_nano@2.0.0
+    shield: putiti48_choc
+    artifact-name: putiti48_choc_200
 
-  - board: nice_nano
-    # shield: putiti60-split_right nice_oled
-    shield: putiti60-split_right
+  # --------------------------
+
+  # ---- Putiti60-split ------
+  # - board: nice_nano
+  #   shield: putiti60-split_left
+
+  # - board: nice_nano
+  #   # shield: putiti60-split_right nice_oled
+  #   shield: putiti60-split_right
   # --------------------------
 
