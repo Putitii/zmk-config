@@ -4,11 +4,19 @@ manifest:
       url-base: https://github.com/zmkfirmware
     # - name: manna-harbour
     #   url-base: https://github.com/manna-harbour
+
+    # nice_oled - nice_epaper - dongle_display!view - oled Adapter
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    # oled Adapter
+    - name: zmk-oled-adapter
+      remote: mctechnology17
+      revision: main
 
     # - name: zmk
     #   remote: manna-harbour
